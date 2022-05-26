@@ -16,11 +16,11 @@ describe('Testes da função getOpeningHours', () => {
   it('Os minutos deverão ser representados por números', () => {
     expect(() => getOpeningHours('Tuesday', '09:0x-AM')).toThrow(/^The minutes should represent a number$/);
   });
-    it('As horas deverão estar entre 0 e 59', () => {
-      expect(() => getOpeningHours('Tuesday', '13:00-AM')).toThrow(/^The hour must be between 0 and 12$/);
-    });
-    it('As horas deverão ser representados por números', () => {
-      expect(() => getOpeningHours('Tuesday', '0x:00-AM')).toThrow(/^The hour should represent a number$/);
+  it('As horas deverão estar entre 0 e 59', () => {
+    expect(() => getOpeningHours('Tuesday', '13:00-AM')).toThrow(/^The hour must be between 0 and 12$/);
+  });
+  it('As horas deverão ser representados por números', () => {
+    expect(() => getOpeningHours('Tuesday', '0x:00-AM')).toThrow(/^The hour should represent a number$/);
   });
   it('A função não faz diferenciação entre maiúsculas e minúsculas', () => {
     const actual = getOpeningHours('sunday', '12:00-AM');

@@ -42,7 +42,6 @@ describe('Testes da função HandlerElephants', () => {
     const expected = null;
     expect(actual).toEqual(expected);
   });
-  ///
   it('O parâmetro precisa ser do tipo string', () => {
     const actual = handlerElephants(true);
     const expected = 'Parâmetro inválido, é necessário uma string';
@@ -52,5 +51,4 @@ describe('Testes da função HandlerElephants', () => {
     const actual = handlerElephants();
     expect(actual).toBeUndefined();
   });
-
 });
